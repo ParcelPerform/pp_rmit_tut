@@ -1,0 +1,48 @@
+version: '2.4'
+services:
+  postgres:
+    image: postgres:10.4-alpine
+    ports:
+      - "5432:5432"
+    networks:
+      - parcel_perform
+
+  zookeeper:
+    # 3.4.9 but no tag on repo
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - parcel_perform
+
+  kafka:
+    image: wurstmeister/kafka:1.0.0
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ADVERTISED_HOST_NAME: pp_rmit_tut_kafka_1
+      KAFKA_ZOOKEEPER_CONNECT: pp_rmit_tut_zookeeper_1:2181
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_DELETE_TOPIC_ENABLE: 'true'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - parcel_perform
+
+  shopping_cart:
+    image: shopping_cart
+    # build: ./shopping_cart
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./shopping_cart/:/src/shopping_cart
+    env_file:
+      - ./shopping_cart/local.env
+    networks:
+      - parcel_perform
+
+networks:
+  parcel_perform:
+    name: parcel_perform
+    driver: bridge
