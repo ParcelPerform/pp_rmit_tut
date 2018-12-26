@@ -42,6 +42,14 @@ services:
     networks:
       - parcel_perform
 
+  warehouse_api:
+    image: warehouse_api
+    #build: ./warehouse_api
+    ports:
+      - "5000:5000"
+    networks:
+      - parcel_perform
+
 networks:
   parcel_perform:
     name: parcel_perform

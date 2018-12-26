@@ -1,4 +1,7 @@
+# sub-project
 /shopping_cart/
+/warehouse_api/
+
 # Python django
 *.pyc
 __pycache__
