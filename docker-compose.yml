@@ -50,6 +50,16 @@ services:
     networks:
       - parcel_perform
 
+  warehouse_mq:
+    image: parcelperform/warehouse_mq
+    #build: ./warehouse_mq
+    volumes:
+      - ./warehouse_mq/:/src/warehouse_mq
+    env_file:
+      - ./warehouse_mq/local.env
+    networks:
+      - parcel_perform
+
   shopping_cart_fe:
     image: parcelperform/shopping_cart_fe
     ports:

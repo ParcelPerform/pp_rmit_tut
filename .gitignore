@@ -2,6 +2,7 @@
 /shopping_cart/
 /warehouse_api/
 /shopping_cart_fe/
+/warehouse_mq/
 
 # Python django
 *.pyc
