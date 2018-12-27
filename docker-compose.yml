@@ -31,7 +31,7 @@ services:
       - parcel_perform
 
   shopping_cart:
-    image: shopping_cart
+    image: parcelperform/shopping_cart
     # build: ./shopping_cart
     ports:
       - "8080:8000"
@@ -43,7 +43,7 @@ services:
       - parcel_perform
 
   warehouse_api:
-    image: warehouse_api
+    image: parcelperform/warehouse_api
     #build: ./warehouse_api
     ports:
       - "5000:5000"

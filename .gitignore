@@ -1,6 +1,7 @@
 # sub-project
 /shopping_cart/
 /warehouse_api/
+/shopping_cart_fe/
 
 # Python django
 *.pyc
