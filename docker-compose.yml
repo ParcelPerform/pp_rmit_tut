@@ -51,14 +51,13 @@ services:
       - parcel_perform
 
   shopping_cart_fe:
-    # image: tritruong20/shopping_cart_fe:latest # If you can not build on your local machine, you can pull this image
-    image: shopping_cart_fe:latest
+    image: parcelperform/shopping_cart_fe
     ports:
       - "9100:9100"
     # Uncomment volumn to dev
-    volumes:
-      - ./shopping_cart_fe/client:/srv/fe-demo-web/client
-      - ./shopping_cart_fe/server:/srv/fe-demo-web/server
+    # volumes:
+    #   - ./shopping_cart_fe/client:/srv/fe-demo-web/client
+    #   - ./shopping_cart_fe/server:/srv/fe-demo-web/server
     networks:
       - parcel_perform
 
