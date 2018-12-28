@@ -16,4 +16,8 @@ e72888b3ce82        parcelperform/shopping_cart      "sh /src/shopping_ca…"   
 
 # Docker download link
 
+### For MacOS
 https://download.docker.com/mac/stable/Docker.dmg
+
+### For Window
+https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
