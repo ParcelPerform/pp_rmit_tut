@@ -14,3 +14,6 @@ e72888b3ce82        parcelperform/shopping_cart      "sh /src/shopping_ca…"   
 55a7b1b005d7        wurstmeister/zookeeper           "/bin/sh -c '/usr/sb…"   40 minutes ago      Up 40 minutes       22/tcp, 2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp   pp_rmit_tut_zookeeper_1_e3145cbf39c2
 ```
 
+# Docker download link
+
+https://download.docker.com/mac/stable/Docker.dmg
