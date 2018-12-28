@@ -65,9 +65,9 @@ services:
     ports:
       - "9100:9100"
     # Uncomment volumn to dev
-    # volumes:
-    #   - ./shopping_cart_fe/client:/srv/fe-demo-web/client
-    #   - ./shopping_cart_fe/server:/srv/fe-demo-web/server
+    volumes:
+      - ./shopping_cart_fe/client:/srv/fe-demo-web/client
+      - ./shopping_cart_fe/server:/srv/fe-demo-web/server
     networks:
       - parcel_perform
 
