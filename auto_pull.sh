@@ -13,4 +13,11 @@ git clone https://github.com/ParcelPerform/warehouse_mq.git  # or git@github.com
 docker pull parcelperform/shopping_cart_fe
 git clone https://github.com/ParcelPerform/shopping_cart_fe.git
 
+export PATH=`echo $PATH`
+list_path=`ls -d -1 $PWD/*/ | tr "\n" " "`
+for i in $list_path
+do
+    cd $i && git pull origin master
+done
+
 docker-compose up -d
